@@ -17,7 +17,7 @@ let cap = {
     },
 }
 
-// cap.sayHi();
+cap.sayHi();
 
 
 "use strict";
@@ -28,7 +28,10 @@ let cap2 = {
         console.log("53", this.firstName);
         function subInner() {
             console.log("54", this.firstName);
-            function isAmInner() {
+            // function isAmInner() {
+            //     console.log("55", this.firstName);
+            // }
+            const isAmInner = () => {
                 console.log("55", this.firstName);
             }
 
@@ -38,7 +41,7 @@ let cap2 = {
     },
 }
 
-// cap2.sayHi();
+cap2.sayHi();
 
 
 const ladder = {

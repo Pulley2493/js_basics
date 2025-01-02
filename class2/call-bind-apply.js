@@ -26,6 +26,7 @@ const ironman = {
     team: 'Iron man',
 }
 
+console.log(Object.getPrototypeOf(ironman));
 // ironman.prototype.petersTeam = cap.petersTeam; // invalid
 
 

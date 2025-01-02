@@ -1,4 +1,4 @@
-"use strict"; // toggle and check all values
+// "use strict"; // toggle and check all values
 
 console.log("hello from", this);
 
@@ -94,3 +94,22 @@ const captainAmerica2 = {
 }
 
 captainAmerica2.saveTheWorld();
+
+
+const saveTheWorld = function () {
+    console.log("on the way 3! consider done", this); // captainAmerica1
+    const abc = () => {
+        console.log("Inside abc3", this); // window
+    }
+
+    abc();
+}
+saveTheWorld();
+
+
+const obj2 = {
+    value: 10,
+    arrowFn: () => console.log('Inside new arrow', this) // Arrow function inherits `this`
+};
+
+obj2.arrowFn(); // `this` refers to the global object (e.g., `window` in browsers)

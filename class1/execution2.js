@@ -4,6 +4,7 @@ console.log(a);
 
 
 // function fn() {
+//     console.log(a);
 //     var a = 20;
 //     console.log(a);
 //     a++;
@@ -44,7 +45,7 @@ console.log(a);
 
 function fn() {
     let a = 20;
-    console.log(a);
+    console.log(this);
     a++;
     console.log(a);
     if (a) {

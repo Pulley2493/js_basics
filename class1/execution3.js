@@ -6,7 +6,7 @@ console.log(fruits);
     let fruits = "apple";
     console.log(fruits);
     {
-        console.log(fruits);
+        // console.log(fruits);
         let fruits;
         // fruits = "Green Aple";
     }
