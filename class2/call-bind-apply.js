@@ -20,14 +20,18 @@ cap.petersTeam("Nayal", "Adil");
 //     }
 // }
 
+// ironman.petersTeam('Ram', 'Shyam');
 
 const ironman = {
     name: 'Tony Stark',
     team: 'Iron man',
 }
 
-console.log(Object.getPrototypeOf(ironman));
+console.log(Object.getPrototypeOf(Object.getPrototypeOf(ironman)));
 // ironman.prototype.petersTeam = cap.petersTeam; // invalid
+
+Object.getPrototypeOf(ironman).petersTeam = cap.petersTeam;
+ironman.petersTeam('Ram', 'Shyam');
 
 
 // this points to ironman while using cap.petersTeam

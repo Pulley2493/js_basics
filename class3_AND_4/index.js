@@ -29,7 +29,7 @@ const arr3 = [...arr];
 // arr3[1] = [3, 4, 5]
 
 arr3[1].push(20);
-// arr3.push(200);
+arr3.push(200);
 console.log("original arr", arr);
 console.log("cloned arr", arr3);
 
@@ -43,7 +43,7 @@ for (let i = 0; i < arr.length; i++) {
 //deep clone
 JSON.stringify(arr); // i am converting arr into a string
 // console.log(typeof JSON.stringify(arr), JSON.stringify(arr));
-// console.log(Array.isArray(JSON.parse(JSON.stringify(arr))));
+console.log(Array.isArray(JSON.parse(JSON.stringify(arr))));
 
 const arr5 = JSON.parse(JSON.stringify(arr));
 arr5[1].push(200);

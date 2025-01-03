@@ -1,5 +1,3 @@
-
-
 const cap = {
     name: 'Steve',
     team: 'cap',
@@ -111,6 +109,7 @@ Function.prototype.myApplySym = function (objOnWhichReqFnToInvoke, params) {
 
     objOnWhichReqFnToInvoke[fnSymbol] = requiredFn;
     objOnWhichReqFnToInvoke[fnSymbol](...params);
+    delete objOnWhichReqFnToInvoke[fnSymbol];
 }
 
 

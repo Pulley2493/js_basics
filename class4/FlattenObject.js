@@ -1,5 +1,5 @@
 const myFlat = function (obj, prefKey) {
-    if (!obj || typeof obj !== 'object') throw new Error("It should be object to flatten");
+    if (!obj || typeof obj !== 'object' || Array.isArray(obj)) throw new Error("It should be object to flatten");
 
     let copyObj = {};
     for (const key in obj) {

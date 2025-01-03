@@ -2,7 +2,7 @@
 
 
 //function expression-- old way
-// abc();
+abc();
 function abc() {
     console.log("abc");
 }
@@ -27,7 +27,10 @@ const abc2 = () => {
 
 const obj = {
     abc1,
-    abc2,
+    abc2: () => {
+        // console.log("abc");
+        console.log(this);
+    }
 };
 
 
