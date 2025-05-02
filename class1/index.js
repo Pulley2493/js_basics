@@ -13,7 +13,7 @@ console.log(b);
 // es 6 - ecma 2015
 
 let c = 10;
-//let c = "adil";//error -- can not redecalre same variable if let keyword is used but you can reinitialise it.
+// let c = "adil";//error -- can not redecalre same variable if let keyword is used but you can reinitialise it.
 c = "adil"
 console.log(c);
 

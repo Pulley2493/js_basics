@@ -1,10 +1,14 @@
 console.log('Welcome to Testing, current val', testStr);
-var testStr = "Somthing";
+
 
 // function testStr() {
 //     console.log("Printing Test String");
 // }
+
+
 // testStr();
+
+var testStr = "Somthing";
 // console.log('Before Val', testStr);
 // testStr = 10;
 // console.log('Final Val', testStr);

@@ -25,6 +25,9 @@ console.log(a);
 //     if (a) {
 //         let a = 30;
 //         a++;
+//         // if (a) {
+//         //     var a = 42;
+//         // }
 //         console.log(a);
 //     }
 //     console.log(a);
@@ -48,6 +51,10 @@ function fn() {
     console.log(this);
     a++;
     console.log(a);
+    if (true) {
+        let a = 45;
+    }
+
     if (a) {
         a = 30;
         a++;
