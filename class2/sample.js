@@ -28,12 +28,12 @@ let cap2 = {
         console.log("53", this.firstName);
         function subInner() {
             console.log("54", this.firstName);
-            // function isAmInner() {
-            //     console.log("55", this.firstName);
-            // }
-            const isAmInner = () => {
+            function isAmInner() {
                 console.log("55", this.firstName);
             }
+            // const isAmInner = () => {
+            //     console.log("55", this.firstName);
+            // }
 
             isAmInner();
         }

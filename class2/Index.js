@@ -26,13 +26,22 @@ captainAmerica.saveTheWorld();
 
 // 3. for execution context created with function call (calling without object), this will point to window function
 // in strict mode this points to undefined
-const obj = {};
+const obj = { type: "Hero" };
 function abc() {
     console.log(obj); // Shadowing
     console.log("Inside abc", this);
 }
 
 abc();
+
+// const and let doesnt get added to windows object however var does, try below without strict mode
+// const obj = { type: "Hero" };
+// function abc() {
+//     console.log(this.obj); // Shadowing
+//     console.log("Inside abc", this);
+// }
+
+// abc();
 
 const saveTheWorld1 = function () {
     console.log("on the way ! consider done", this); // window
@@ -57,7 +66,6 @@ const captainAmerica1 = {
 
         abc();
     }
-
 }
 
 captainAmerica1.saveTheWorld();
@@ -83,9 +91,9 @@ const captainAmerica2 = {
     },
     movies: ["first avenger", "civil war", "infinity war"],
     saveTheWorld: function () {
-        console.log("on the way 2! consider done", this); // captainAmerica1
+        console.log("on the way 2! consider done", this); // captainAmerica2
         const abc = () => {
-            console.log("Inside abc2", this); // window
+            console.log("Inside abc2", this); // captainAmerica2
         }
 
         abc();
@@ -97,7 +105,7 @@ captainAmerica2.saveTheWorld();
 
 
 const saveTheWorld = function () {
-    console.log("on the way 3! consider done", this); // captainAmerica1
+    console.log("on the way 3! consider done", this); // window - toggle to check for use strict effect
     const abc = () => {
         console.log("Inside abc3", this); // window
     }

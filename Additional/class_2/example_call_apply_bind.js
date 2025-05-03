@@ -24,6 +24,7 @@ console.log(cap.sayHi());
 
 let sayHiFn = cap.sayHi;
 console.log(sayHiFn());
+
 let cap2 = {
     name: "Simran M"
 }
@@ -187,3 +188,6 @@ let sayHiFn2 = cap7.sayHi.bind(cap8, 'Hello ');
 sayHiFn2(); // Sachin
 
 sayHiFn2.call(cap7, 'Hello ');//Sachin
+
+let sayHiFn2 = cap7.sayHi.bind(cap8);
+sayHiFn2('Hey ! '); // Sachin
